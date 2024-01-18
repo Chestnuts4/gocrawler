@@ -1,6 +1,7 @@
 package rss
 
 import (
+	"context"
 	"fmt"
 	"net/http"
 	"net/http/httptest"
@@ -10,13 +11,46 @@ import (
 )
 
 func TestStart(t *testing.T) {
-	monitor := &Monitor{
-		Url:      "https://www.citrix.com/content/citrix/en_us/downloads/citrix-adc.rss",
-		Interval: 10,
-		Proxy:    "http://192.168.59.1:8083",
+	rss1, err := os.ReadFile("citrix-adc.rss")
+	if err != nil {
+		t.Fatalf("Failed to read RSS file: %v", err)
 	}
 
+	rss2, err := os.ReadFile("citrix-adc2.rss")
+	if err != nil {
+		t.Fatalf("Failed to read RSS file: %v", err)
+	}
+	requestCount := 0
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if requestCount == 0 {
+			w.Write(rss1)
+		} else if requestCount == 1 {
+			w.Write(rss2)
+		} else {
+			w.Write(rss2)
+		}
+		requestCount++
+	}))
+	defer server.Close()
+
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	monitor := NewMonitor(server.URL, 1, "", ctx, cancel)
+
 	monitor.Start()
+	go func() {
+		// 检查errors 通道,循环五次
+		for i := 0; i < 5; i++ {
+			select {
+			case err := <-monitor.Errors:
+				t.Fatalf("Failed to check feed update: %v", err)
+			default:
+				time.Sleep(time.Second)
+			}
+
+		}
+
+	}()
 }
 
 func TestCheckFeedUpdate(t *testing.T) {
@@ -43,8 +77,8 @@ func TestCheckFeedUpdate(t *testing.T) {
 	}))
 	// 关闭服务器
 	defer server.Close()
-
-	monitor := NewMonitor(server.URL, 10, "http://192.168.59.1:8083", nil, nil)
+	ctx, cancel := context.WithCancel(context.Background())
+	monitor := NewMonitor(server.URL, 10, "http://192.168.59.1:8083", ctx, cancel)
 	fmt.Printf("Server URL: %s\n", server.URL)
 
 	// 循环三次，调用CheckFeedUpdate
