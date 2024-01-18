@@ -78,7 +78,7 @@ func TestCheckFeedUpdate(t *testing.T) {
 	// 关闭服务器
 	defer server.Close()
 	ctx, cancel := context.WithCancel(context.Background())
-	monitor := NewMonitor(server.URL, 10, "http://192.168.59.1:8083", ctx, cancel)
+	monitor := NewMonitor(server.URL, 10, "", ctx, cancel)
 	fmt.Printf("Server URL: %s\n", server.URL)
 
 	// 循环三次，调用CheckFeedUpdate
