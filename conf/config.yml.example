@@ -1,3 +1,16 @@
-bot:
+tgbot:
   token: token
+  proxy: "socks5://127.0.0.1:10808"
+
+lanxin:
+  secret: secret
+  webhook: webhook
+  proxy: "http://127.0.0.1:8083"
+
+monitor:
+  # 监控的URL
+  # url: https://www.citrix.com/content/citrix/en_us/downloads/citrix-adc.rss
+  url: http://127.0.0.1:58080
+  # 频率
+  interval: 5
   proxy: "socks5://127.0.0.1:10808"
