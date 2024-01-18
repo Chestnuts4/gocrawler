@@ -13,6 +13,7 @@ type Bot interface {
 	SendMsg(msg *config.Msg) error
 	// bot名字
 	GetBotName() string
+	Start() error
 }
 
 func SendMsgAllBots(m *config.Msg) {

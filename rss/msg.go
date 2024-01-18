@@ -14,9 +14,15 @@ func buildMsg(title string, link string, date string) *config.Msg {
 	return m
 }
 
-func sendMsg(items []*gofeed.Item) error {
-	for _, item := range items {
-		go bot.SendMsgAllBots(buildMsg(item.Title, item.Link, item.Published))
+func sendItemsToBots(items []*gofeed.Item) error {
+	if len(items) == 0 {
+		return nil
 	}
+	if len(items) < 10 {
+		for _, item := range items {
+			bot.SendMsgAllBots(buildMsg(item.Title, item.Link, item.Published))
+		}
+	}
+
 	return nil
 }

@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/Chestnuts4/citrix-update-monitor/config"
+	"github.com/Chestnuts4/citrix-update-monitor/util"
 )
 
 const lanxinBotName = "lanxin bot"
@@ -62,9 +63,27 @@ var statusCodeMap = map[int]string{
 }
 
 type LanxinBot struct {
-	secret  string
-	webhook string
-	proxy   string
+	secret     string
+	webhook    string
+	proxy      string
+	httpClient *http.Client
+	msgChan    chan config.Msg
+	errChan    chan error
+}
+
+func NewLangxinBot(secret string, webhook string, proxy string) (*LanxinBot, error) {
+	client, err := util.BuildClientWithProxy(proxy)
+	if err != nil {
+		return nil, err
+	}
+	return &LanxinBot{
+		secret:     secret,
+		webhook:    webhook,
+		proxy:      proxy,
+		httpClient: client,
+		msgChan:    make(chan config.Msg),
+		errChan:    make(chan error),
+	}, nil
 }
 
 func (b *LanxinBot) SendMsg(msg config.Msg) error {
@@ -82,9 +101,6 @@ func (b *LanxinBot) SendMsg(msg config.Msg) error {
 		}
 	}`, signature, timestamp, msg))
 
-	// Make the HTTP request using the payload
-	// Replace the URL with your actual endpoint
-
 	req, err := http.NewRequest("POST", b.webhook, bytes.NewBuffer(payload))
 	if err != nil {
 		// Handle error
@@ -93,8 +109,7 @@ func (b *LanxinBot) SendMsg(msg config.Msg) error {
 
 	req.Header.Set("Content-Type", "application/json")
 
-	client := &http.Client{}
-	resp, err := client.Do(req)
+	resp, err := b.httpClient.Do(req)
 	if err != nil {
 		// Handle error
 		return err

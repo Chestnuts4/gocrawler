@@ -30,6 +30,7 @@ func NewMonitor(url string, interval int, proxy string, ctx context.Context, can
 		Proxy:     proxy,
 		LastItems: make(map[string]*gofeed.Item),
 		Updates:   make(chan []*gofeed.Item),
+		Errors:    make(chan error),
 		Ctx:       ctx,
 		Cancel:    cancel,
 	}
@@ -61,14 +62,13 @@ func (m *Monitor) Start() {
 			case <-m.Ctx.Done():
 				return
 			case items := <-m.Updates:
-				err := sendMsg(items)
+				err := sendItemsToBots(items)
 				if err != nil {
 					m.Errors <- err
 				}
 			}
 		}
 	}()
-
 }
 
 func (m *Monitor) checkFeedUpdate() ([]*gofeed.Item, error) {
