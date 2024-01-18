@@ -3,6 +3,7 @@ package bot
 import (
 	"bytes"
 	"context"
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -116,21 +117,33 @@ func (b *LanxinBot) Start(ctx context.Context) error {
 	return nil
 }
 
+type MsgData struct {
+	Text struct {
+		Content string `json:"content"`
+	} `json:"text"`
+}
+
+type lanxinMsgData struct {
+	Sign      string  `json:"sign"`
+	Timestamp string  `json:"timestamp"`
+	MsgType   string  `json:"msgType"`
+	MsgData   MsgData `json:"msgData"`
+}
+
 func (b *LanxinBot) sendMsg(msg string) error {
 	signature := util.LanxinSign(b.secret)
 	timestamp := fmt.Sprintf("%v", time.Now().Unix())
-	payload := []byte(fmt.Sprintf(`{
-		"sign": "%s",
-		"timestamp": "%s",
-		"msgType": "text",
-		"msgData": {
-			"text": {
-				"content": "%s"
-			}
-		}
-	}`, signature, timestamp, "aa"))
-
-	req, err := http.NewRequest("POST", b.webhook, bytes.NewBuffer(payload))
+	lxMsg := lanxinMsgData{
+		Sign:      signature,
+		Timestamp: timestamp,
+		MsgType:   "text",
+	}
+	lxMsg.MsgData.Text.Content = msg
+	lxMsgBytes, err := json.Marshal(lxMsg)
+	if err != nil {
+		return err
+	}
+	req, err := http.NewRequest("POST", b.webhook, bytes.NewBuffer(lxMsgBytes))
 	if err != nil {
 		// Handle error
 		return err
