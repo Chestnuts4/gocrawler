@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+ <title>NetScaler Download Updates</title>
+ <description>Download updates for NetScaler</description>
+
+ <link>https://www.citrix.com/downloads/citrix-adc.html</link>
+<item>
+    <title>New - Citrix ADC VPX Release 14.1</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/virtual-appliances/vpx-release-14-1.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/virtual-appliances/vpx-release-14-1.html#id581928535</guid>
+    <pubDate>Tue, 16 Jan 2024 17:00:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC VPX FIPS Release 13.1</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/virtual-appliances/netscaler-vpx-release-131-FIPS.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/virtual-appliances/netscaler-vpx-release-131-FIPS.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC VPX Release 13.0</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/virtual-appliances/vpx-release-130.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/virtual-appliances/vpx-release-130.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC VPX FIPS Release 12.1</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/virtual-appliances/netscaler-vpx-release-121-FIPS.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/virtual-appliances/netscaler-vpx-release-121-FIPS.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC NDcPP Release 12.1 build 55.302</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-121-build-55282.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-121-build-55282.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC FIPS Release 12.1 Build 55.302</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-121-build-55179.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-121-build-55179.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Maintenance Phase) 13.0 Build 92.18/92.19/92.21</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-13-0-build-92-18.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-13-0-build-92-18.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.0 Build 92.18/92.19/92.21</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-13-0-92-18.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-13-0-92-18.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Maintenance Phase) 13.0 Build 92.18/92.19/92.21</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-13-0-92-18.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-13-0-92-18.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Feature Phase) 14.1 Build 12.30/12.35</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-14-1-build-12-30.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-14-1-build-12-30.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Feature Phase) 14.1 Build 12.30/12.35</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-14-1-12-30.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-14-1-12-30.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image (Feature Phase) 14.1 Build 12.30/12.35</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-14-1-12-30.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-14-1-12-30.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.1 Build 51.14/51.15</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-13-1-51-14.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-13-1-51-14.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Maintenance Phase) 13.1 Build 51.14/51.15</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-13-1-51-14.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-13-1-51-14.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Maintenance Phase) 13.1 Build 51.14/51.15</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-13-1-build-51-14.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-13-1-build-51-14.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC FIPS Release 13.1 Build 37.176</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-131-build-37176.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-131-build-37176.html#id-2071026409</guid>
+    <pubDate>Tue, 16 Jan 2024 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Maintenance Phase) 13.1-51.14</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-13-1-51-14.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-13-1-51-14.html#id-24082154</guid>
+    <pubDate>Thu, 14 Dec 2023 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Feature Phase) 14.1-12.30</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-14-1-12-30.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-14-1-12-30.html#id-2143893226</guid>
+    <pubDate>Tue, 28 Nov 2023 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Maintenance Phase) 13.1 Build 50.23</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-13-1-build-50-23.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-13-1-build-50-23.html#id-892716783</guid>
+    <pubDate>Mon, 23 Oct 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Maintenance Phase) 13.1-50.23</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-13-1-50-23.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-13-1-50-23.html#id-892716783</guid>
+    <pubDate>Mon, 23 Oct 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Maintenance Phase) 13.1 Build 50.23</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-13-1-50-23.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-13-1-50-23.html#id-892716783</guid>
+    <pubDate>Mon, 23 Oct 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.1 Build 50.23</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-13-1-50-23.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-13-1-50-23.html#id-892716783</guid>
+    <pubDate>Mon, 23 Oct 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.1 Build 49.13/49.15</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-13-1-49-13.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-13-1-49-13.html#id1225695697</guid>
+    <pubDate>Tue, 10 Oct 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Maintenance Phase) 13.1 Build 49.13/49.15</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-13-1-49-13.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-13-1-49-13.html#id1225695697</guid>
+    <pubDate>Tue, 10 Oct 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Maintenance Phase) 13.1 Build 49.13/49.15</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-13-1-build-49-13.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-13-1-build-49-13.html#id668415185</guid>
+    <pubDate>Tue, 10 Oct 2023 03:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC FIPS Release 13.1 Build 37.164</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-131-build-37164.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-131-build-37164.html#id668415185</guid>
+    <pubDate>Tue, 10 Oct 2023 03:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Feature Phase) 14.1-8.50</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-14-1-8-50.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-14-1-8-50.html#id1170629904</guid>
+    <pubDate>Tue, 26 Sep 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image (Feature Phase) 14.1 Build 8.50</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-14-1-8-50.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-14-1-8-50.html#id1170629904</guid>
+    <pubDate>Tue, 26 Sep 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Feature Phase) 14.1 Build 8.50</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-14-1-8-50.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-14-1-8-50.html#id1170629904</guid>
+    <pubDate>Tue, 26 Sep 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Feature Phase) 14.1 Build 8.50</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-14-1-build-8-50.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-14-1-build-8-50.html#id-268694320</guid>
+    <pubDate>Tue, 26 Sep 2023 03:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - List of Endpoints and Dashboards</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/sample-dashboards/endpoints-and-dashboards.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/sample-dashboards/endpoints-and-dashboards.html#id690017552</guid>
+    <pubDate>Fri, 22 Sep 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Maintenance Phase) 13.0-92.18</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-13-0-92-18.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-13-0-92-18.html#id-403721968</guid>
+    <pubDate>Thu, 07 Sep 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Maintenance Phase) 13.1-49.13/49.14</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-13-1-49-13.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-13-1-49-13.html#id1648939283</guid>
+    <pubDate>Mon, 14 Aug 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Feature Phase) 14.1 Build 4.42</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-14-1-build-4-42.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-14-1-build-4-42.html#id1178889491</guid>
+    <pubDate>Mon, 07 Aug 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Feature Phase) 14.1-4.42</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-14-1-4-42.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-14-1-4-42.html#id1178889491</guid>
+    <pubDate>Mon, 07 Aug 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image (Feature Phase) 14.1 Build 4.42</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-14-1-4-42.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-14-1-4-42.html#id1178889491</guid>
+    <pubDate>Mon, 07 Aug 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Feature Phase) 14.1 Build 4.42</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-14-1-4-42.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-14-1-4-42.html#id1178889491</guid>
+    <pubDate>Mon, 07 Aug 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Maintenance Phase) 13.0 Build 91.12/91.13</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-13-0-build-91-12.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-13-0-build-91-12.html#id950047187</guid>
+    <pubDate>Tue, 18 Jul 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.0 Build 91.12/91.13</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-13-0-91-12.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/bare-metal-adc/blx-13-0-91-12.html#id950047187</guid>
+    <pubDate>Tue, 18 Jul 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Maintenance Phase) 13.0 Build 91.12/91.13</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-13-0-91-12.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-13-0-91-12.html#id950047187</guid>
+    <pubDate>Tue, 18 Jul 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC FIPS Release 13.1 Build 37.159</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-131-build-37159.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-131-build-37159.html#id-45933293</guid>
+    <pubDate>Tue, 18 Jul 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Feature Phase) 13.1 Build 48.47</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-1-build-48-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-1-build-48-47.html#id668470546</guid>
+    <pubDate>Mon, 12 Jun 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Feature Phase) 13.1-48.47</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-1-48-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-1-48-47.html#id668470546</guid>
+    <pubDate>Mon, 12 Jun 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Feature Phase) 13.1 Build 48.47</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-1-48-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-1-48-47.html#id668470546</guid>
+    <pubDate>Mon, 12 Jun 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.1 Build 48.47</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-1-48-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-1-48-47.html#id668470546</guid>
+    <pubDate>Mon, 12 Jun 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Maintenance Phase) 13.0-91.12</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-13-0-91-12.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/service-delivery-appliances/sdx-bundle-13-0-91-12.html#id1738727890</guid>
+    <pubDate>Fri, 19 May 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Maintenance Phase) 13.0 Build 90.7/90.12</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-0-build-90-7.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-0-build-90-7.html#id1657046482</guid>
+    <pubDate>Thu, 18 May 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Maintenance Phase) 13.0 Build 90.7/90.12</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-0-90-7.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-0-90-7.html#id1657046482</guid>
+    <pubDate>Thu, 18 May 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.0 Build 90.7/90.12</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-0-90-7.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-0-90-7.html#id1657046482</guid>
+    <pubDate>Thu, 18 May 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Feature Phase) 13.1 Build 45.61/45.64</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-1-build-45-61.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-1-build-45-61.html#id1657046482</guid>
+    <pubDate>Thu, 18 May 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Feature Phase) 13.1 Build 45.61/45.64</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-1-45-61.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-1-45-61.html#id1657046482</guid>
+    <pubDate>Thu, 18 May 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.1 Build 45.61/45.64</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-1-45-61.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-1-45-61.html#id1657046482</guid>
+    <pubDate>Thu, 18 May 2023 17:00:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC VPX Release 12.1</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/virtual-appliances/netscaler-vpx-release-121.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/virtual-appliances/netscaler-vpx-release-121.html#id-1765788398</guid>
+    <pubDate>Tue, 09 May 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Maintenance Phase) 12.1 Build 65.25/65.35</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-12-1-65-15.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/container-based-adc/cpx-12-1-65-15.html#id-1765788398</guid>
+    <pubDate>Tue, 09 May 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Maintenance Phase) 12.1 Build 65.25/65.35</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/firmware/release-12-1-build-65-15.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/firmware/release-12-1-build-65-15.html#id-1765788398</guid>
+    <pubDate>Tue, 09 May 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Maintenance Phase) 13.0-90.7/90.11</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-0-90-7.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-0-90-7.html#id-1765788398</guid>
+    <pubDate>Tue, 09 May 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Feature Phase) 13.1-45.61/45.63</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-1-45-61.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-1-45-61.html#id1978133789</guid>
+    <pubDate>Wed, 03 May 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC FIPS Release 13.1 Build 37.150</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-131-build-37150.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-131-build-37150.html#id595628317</guid>
+    <pubDate>Mon, 24 Apr 2023 14:30:00 -0400</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Feature Phase) 13.1 Build 42.47</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-1-build-42-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-1-build-42-47.html#id-1287142052</guid>
+    <pubDate>Tue, 28 Feb 2023 03:00:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.1 Build 42.47</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-1-42-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-1-42-47.html#id-1287142052</guid>
+    <pubDate>Tue, 28 Feb 2023 03:00:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Feature Phase) 13.1 Build 42.47</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-1-42-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-1-42-47.html#id-1287142052</guid>
+    <pubDate>Tue, 28 Feb 2023 03:00:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Feature Phase) 13.1-42.47</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-1-42-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-1-42-47.html#id-1287142052</guid>
+    <pubDate>Tue, 28 Feb 2023 03:00:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Feature Phase) 13.1-37.39</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-1-37-39.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-1-37-39.html#id-1407296225</guid>
+    <pubDate>Thu, 22 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - SDX Bundle (Maintenance Phase) 13.0-89.7</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-0-89-7.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/sdx-bundle-13-0-89-7.html#id-1130272481</guid>
+    <pubDate>Mon, 19 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Maintenance Phase) 13.0 Build 89.7</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-0-89-7.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-0-89-7.html#id-1130272481</guid>
+    <pubDate>Mon, 19 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.0 Build 89.7</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-0-89-7.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-0-89-7.html#id-1130272481</guid>
+    <pubDate>Mon, 19 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Maintenance Phase) 13.0 Build 89.7</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-0-build-89-7.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-0-build-89-7.html#id-1130272481</guid>
+    <pubDate>Mon, 19 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Feature Phase) 13.1 Build 33.54</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-1-build-33-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-1-build-33-47.html#id1509216542</guid>
+    <pubDate>Thu, 01 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC Release (Maintenance Phase) 13.0 Build 88.16</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-0-build-88-12.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/release-13-0-build-88-12.html#id1509216542</guid>
+    <pubDate>Thu, 01 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.0 Build 88.16</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-0-88-12.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-0-88-12.html#id1509216542</guid>
+    <pubDate>Thu, 01 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Feature Phase) 13.1 Build 33.54</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-1-33-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-1-33-47.html#id1509216542</guid>
+    <pubDate>Thu, 01 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.1 Build 33.54</title>
+    <description>New downloads are available for  </description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-1-33-47.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-1-33-47.html#id1509216542</guid>
+    <pubDate>Thu, 01 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC CPX Release (Maintenance Phase) 13.0 Build 88.16</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-0-88-12.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/cpx-13-0-88-12.html#id1509216542</guid>
+    <pubDate>Thu, 01 Dec 2022 13:30:00 -0500</pubDate>
+  </item>
+<item>
+    <title>New - Citrix ADC BLX image 13.1 Build 37.38</title>
+    <description>New downloads are available for NetScaler</description>
+    <link>https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-1-37-38.html</link>
+    <guid isPermaLink="false">https://www.citrix.com/downloads/citrix-adc/earlier-versions/blx-13-1-37-38.html#id1403001118</guid>
+    <pubDate>Tue, 29 Nov 2022 13:30:00 -0500</pubDate>
+  </item>
+</channel>
+</rss>
