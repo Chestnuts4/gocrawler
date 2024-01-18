@@ -2,3 +2,4 @@ conf/*.yml
 conf/*.yaml
 .idea/
 
+.VSCodeCounter/**
