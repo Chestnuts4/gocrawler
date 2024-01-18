@@ -38,19 +38,18 @@ func TestStart(t *testing.T) {
 	monitor := NewMonitor(server.URL, 1, "", ctx, cancel)
 
 	monitor.Start()
-	go func() {
-		// 检查errors 通道,循环五次
-		for i := 0; i < 5; i++ {
-			select {
-			case err := <-monitor.Errors:
-				t.Fatalf("Failed to check feed update: %v", err)
-			default:
-				time.Sleep(time.Second)
-			}
 
+	// 检查errors 通道,循环五次
+	for i := 0; i < 5; i++ {
+		select {
+		case err := <-monitor.Errors:
+			t.Fatalf("Failed to check feed update: %v", err)
+		default:
+			time.Sleep(time.Second)
 		}
 
-	}()
+	}
+
 }
 
 func TestCheckFeedUpdate(t *testing.T) {
