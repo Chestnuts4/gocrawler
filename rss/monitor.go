@@ -18,6 +18,7 @@ type Monitor struct {
 	LastItems map[string]*gofeed.Item
 	// channel
 	Updates chan []*gofeed.Item // 添加一个channel字段
+	Errors  chan error
 	Ctx     context.Context
 	Cancel  context.CancelFunc
 }
@@ -44,7 +45,7 @@ func (m *Monitor) Start() {
 			default:
 				updateItems, err := m.checkFeedUpdate()
 				if err != nil {
-					log.Printf("Failed to check feed update: %v", err)
+					m.Errors <- err
 					continue
 				}
 				m.Updates <- updateItems
@@ -60,7 +61,10 @@ func (m *Monitor) Start() {
 			case <-m.Ctx.Done():
 				return
 			case items := <-m.Updates:
-				sendMsg(items)
+				err := sendMsg(items)
+				if err != nil {
+					m.Errors <- err
+				}
 			}
 		}
 	}()
