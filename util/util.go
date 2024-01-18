@@ -1,10 +1,15 @@
 package util
 
 import (
+	"crypto/hmac"
+	"crypto/sha256"
+	"encoding/base64"
 	"fmt"
 	"net/http"
 	"net/url"
+	"time"
 
+	"github.com/Chestnuts4/citrix-update-monitor/config"
 	"golang.org/x/net/proxy"
 )
 
@@ -49,4 +54,18 @@ func BuildClientWithProxy(addr string) (*http.Client, error) {
 	}
 
 	return &http.Client{}, nil
+}
+
+func FormatMsg(msg *config.Msg) string {
+	formatStr := "title: %s\nDesc:%s\nLink: %s\nGuid: %s\nDate: %s"
+	return fmt.Sprintf(formatStr, msg.Title, msg.Description, msg.Link, msg.Guid, msg.Date)
+}
+
+func LanxinSign(secret string) string {
+	timestamp := time.Now().Unix()
+	stringToSign := fmt.Sprintf("%v", timestamp) + "@" + secret
+	h := hmac.New(sha256.New, []byte(stringToSign))
+	signature := base64.StdEncoding.EncodeToString(h.Sum(nil))
+
+	return signature
 }
