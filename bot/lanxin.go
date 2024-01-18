@@ -2,10 +2,9 @@ package bot
 
 import (
 	"bytes"
-	"crypto/hmac"
-	"crypto/sha256"
-	"encoding/base64"
+	"context"
 	"fmt"
+	"log"
 	"net/http"
 	"time"
 
@@ -63,11 +62,12 @@ var statusCodeMap = map[int]string{
 }
 
 type LanxinBot struct {
+	name       string
 	secret     string
 	webhook    string
 	proxy      string
 	httpClient *http.Client
-	msgChan    chan config.Msg
+	msgChan    chan string
 	errChan    chan error
 }
 
@@ -77,19 +77,48 @@ func NewLangxinBot(secret string, webhook string, proxy string) (*LanxinBot, err
 		return nil, err
 	}
 	return &LanxinBot{
+		name:       lanxinBotName,
 		secret:     secret,
 		webhook:    webhook,
 		proxy:      proxy,
 		httpClient: client,
-		msgChan:    make(chan config.Msg),
+		msgChan:    make(chan string),
 		errChan:    make(chan error),
 	}, nil
 }
 
-func (b *LanxinBot) SendMsg(msg config.Msg) error {
-	signature := LanxinSign(b.secret)
-	timestamp := fmt.Sprintf("%v", time.Now().Unix())
+func (b *LanxinBot) Start(ctx context.Context) error {
+	go func() {
+		for {
+			select {
+			case msg := <-b.msgChan:
+				err := b.sendMsg(msg)
+				if err != nil {
+					b.errChan <- err
+				}
 
+			case <-ctx.Done():
+				return
+			}
+		}
+	}()
+
+	go func() {
+		for {
+			select {
+			case err := <-b.errChan:
+				log.Println(err)
+			case <-ctx.Done():
+				return
+			}
+		}
+	}()
+	return nil
+}
+
+func (b *LanxinBot) sendMsg(msg string) error {
+	signature := util.LanxinSign(b.secret)
+	timestamp := fmt.Sprintf("%v", time.Now().Unix())
 	payload := []byte(fmt.Sprintf(`{
 		"sign": "%s",
 		"timestamp": "%s",
@@ -99,7 +128,7 @@ func (b *LanxinBot) SendMsg(msg config.Msg) error {
 				"content": "%s"
 			}
 		}
-	}`, signature, timestamp, msg))
+	}`, signature, timestamp, "aa"))
 
 	req, err := http.NewRequest("POST", b.webhook, bytes.NewBuffer(payload))
 	if err != nil {
@@ -116,23 +145,16 @@ func (b *LanxinBot) SendMsg(msg config.Msg) error {
 	}
 	defer resp.Body.Close()
 
-	// Process the response
-	// ...
+	return nil
+
+}
+
+func (b *LanxinBot) SendMsg(msg *config.Msg) error {
+	msgStr := util.FormatMsg(msg)
+	b.msgChan <- msgStr
 	return nil
 }
 
 func (b *LanxinBot) GetBotName() string {
 	return lanxinBotName
-}
-
-func LanxinSign(secret string) string {
-	timestamp := time.Now().Unix()
-
-	stringToSign := fmt.Sprintf("%v", timestamp) + "@" + secret
-	fmt.Println(stringToSign)
-
-	h := hmac.New(sha256.New, []byte(stringToSign))
-	signature := base64.StdEncoding.EncodeToString(h.Sum(nil))
-
-	return signature
 }

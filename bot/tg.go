@@ -2,8 +2,8 @@ package bot
 
 import (
 	"context"
-	"fmt"
 	"log"
+	"strings"
 
 	"github.com/Chestnuts4/citrix-update-monitor/config"
 	"github.com/Chestnuts4/citrix-update-monitor/util"
@@ -11,6 +11,7 @@ import (
 )
 
 type TgBot struct {
+	name    string
 	token   string
 	proxy   string
 	bot     *tb.Bot
@@ -26,14 +27,20 @@ func NewTgbot(token string, proxy string) (*TgBot, error) {
 		return nil, err
 	}
 	bot, err := tb.NewBot(tb.Settings{
-		Token:  token,
-		Poller: &tb.LongPoller{Timeout: 10},
+		Token: token,
+		Poller: &tb.LongPoller{Timeout: 10, AllowedUpdates: []string{"message",
+			"chat_member",
+			"inline_query",
+			"callback_query"}},
 		Client: client,
 	})
 	if err != nil {
 		return nil, err
 	}
+
+	registerHandle(bot)
 	return &TgBot{
+		name:    tgBotName,
 		token:   token,
 		proxy:   proxy,
 		bot:     bot,
@@ -43,9 +50,7 @@ func NewTgbot(token string, proxy string) (*TgBot, error) {
 }
 
 // 接收context
-func (t *TgBot) Start(ctx context.Context) {
-
-	t.bot.Start()
+func (t *TgBot) Start(ctx context.Context) error {
 
 	go func() {
 		for {
@@ -72,18 +77,50 @@ func (t *TgBot) Start(ctx context.Context) {
 			}
 		}
 	}()
-}
-
-func (t *TgBot) sendMsg(msg string) error {
-
+	t.bot.Start()
 	return nil
 }
 
-func (t *TgBot) SendMsg(msg config.Msg) {
-	msgStr := fmt.Sprintf("%s\n%s\n%s", msg.Title, msg.Link, msg.Date)
+func registerHandle(bot *tb.Bot) {
+	bot.Handle(tb.OnText, func(c tb.Context) error {
+		// 判断在艾特自己 contains
+		if strings.Contains(c.Message().Text, "@"+bot.Me.Username) {
+			// 回复消息
+			err := c.Send("Hello, I'm a bot!")
+			if err != nil {
+				log.Println(err)
+			}
+
+		}
+		// get group id from message
+		if c.Message().Chat.Type == tb.ChatGroup {
+			log.Printf("group id: %v\nname: %v", c.Message().Chat.ID, c.Message().Chat.Title)
+
+		}
+		// get group name from message
+		log.Printf("message: %v", c.Message().Text)
+
+		return nil
+
+	})
+}
+
+func (t *TgBot) sendMsg(msg string) error {
+	_, err := t.bot.Send(&tb.Chat{ID: -4193925869}, msg)
+	if err != nil {
+		return err
+	}
+	//log.Printf("send msg: %v", retMsg)
+	return nil
+}
+
+func (t *TgBot) SendMsg(msg *config.Msg) error {
+
+	msgStr := util.FormatMsg(msg)
 	t.msgChan <- msgStr
+	return nil
 }
 
 func (t *TgBot) GetBotName() string {
-	return tgBotName
+	return t.name
 }
