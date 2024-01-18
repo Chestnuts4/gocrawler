@@ -5,8 +5,12 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"os"
+	"os/signal"
+	"syscall"
 	"time"
 
+	"github.com/Chestnuts4/citrix-update-monitor/config"
 	"github.com/Chestnuts4/citrix-update-monitor/util"
 	"github.com/mmcdole/gofeed"
 )
@@ -34,6 +38,20 @@ func NewMonitor(url string, interval int, proxy string, ctx context.Context, can
 		Ctx:       ctx,
 		Cancel:    cancel,
 	}
+}
+
+func Start() {
+	url := config.Config.Get("monitor.url").(string)
+	interval := config.Config.Get("monitor.interval").(int)
+	proxy := config.Config.Get("monitor.proxy").(string)
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+
+	monitor := NewMonitor(url, interval, proxy, ctx, cancel)
+	monitor.Start()
+	signalChan := make(chan os.Signal, 1)
+	signal.Notify(signalChan, syscall.SIGINT, syscall.SIGTERM)
+	<-signalChan
 }
 
 func (m *Monitor) Start() {
