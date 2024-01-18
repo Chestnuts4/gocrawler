@@ -8,7 +8,7 @@ import (
 
 var Config *viper.Viper
 
-func init() {
+func LoadConf() {
 	Config = viper.New()
 	Config.SetConfigFile("conf/config.yml")
 	err := Config.ReadInConfig()

@@ -3,54 +3,23 @@ package main
 import (
 	"fmt"
 	"log"
-	"net/http"
-	"net/url"
 	"time"
 
 	"github.com/Chestnuts4/citrix-update-monitor/config"
-	"golang.org/x/net/proxy"
+	"github.com/Chestnuts4/citrix-update-monitor/util"
 	tb "gopkg.in/telebot.v3"
 )
 
-func buildClientWithProxy(addr string) (*http.Client, error) {
-	if addr != "" {
-		u, err := url.Parse(addr)
-		if err != nil {
-			panic(err)
-		}
-
-		var auth *proxy.Auth
-		if u.User != nil { // credentials are set
-			pass, _ := u.User.Password()
-			auth = &proxy.Auth{
-				User:     u.User.Username(),
-				Password: pass,
-			}
-		}
-		dialer, err := proxy.SOCKS5("tcp", u.Host, auth, proxy.Direct)
-		if err != nil {
-			return nil, err
-		}
-
-		// Patch client transport
-		httpTransport := &http.Transport{Dial: dialer.Dial}
-		hc := &http.Client{Transport: httpTransport}
-
-		return hc, nil
-	}
-
-	return nil, nil // use default
-}
-
 func main() {
 	fmt.Println("bot started")
-	token := config.Config.Get("bot.token").(string)
+	config.LoadConf()
+	token := config.Config.Get("tgbot.token").(string)
 	if token == "" {
 		log.Println("Set token via environment\nBOT_TOKEN=<your_token>")
 		return
 	}
-	proxyStr := config.Config.Get("bot.proxy").(string)
-	client, err := buildClientWithProxy(proxyStr)
+	proxyStr := config.Config.Get("tgbot.proxy").(string)
+	client, err := util.BuildClientWithProxy(proxyStr)
 	if err != nil {
 		log.Fatal(err)
 		return
@@ -68,8 +37,17 @@ func main() {
 
 	log.Printf("Bot started[%s]", b.Me.Username)
 
-	b.Handle("/start", func(c tb.Context) error {
-		return c.Send("aaaa")
+	b.Handle(tb.OnText, func(c tb.Context) error {
+
+		// 判断在艾特自己
+		if c.Message().Text == "@"+b.Me.Username {
+			// 回复消息
+			err := c.Send("Hello, I'm a bot!")
+			if err != nil {
+				log.Println(err)
+			}
+		}
+		return nil
 
 	})
 
