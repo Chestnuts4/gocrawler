@@ -21,11 +21,11 @@ func buildMsg(title string, desc string, link string, guid string, date string) 
 
 func sendItemsToBots(items []*gofeed.Item) error {
 
-	// if len(items) >= 10 {
-	// 	log.Println("Items length >=10 break")
+	if len(items) >= 10 {
+		log.Println("Items length >=10 break")
 
-	// 	return nil
-	// }
+		return nil
+	}
 	// for _, item := range items {
 	// 	<-ticker.C // 等待定时器的下一个事件
 	// 	log.Printf("Send message to all bots: %s", item.Title)
