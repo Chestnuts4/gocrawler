@@ -7,8 +7,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/Chestnuts4/citrix-update-monitor/config"
 	socks5 "github.com/armon/go-socks5"
 	"github.com/elazarl/goproxy"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestBuildClientWithProxy(t *testing.T) {
@@ -55,7 +57,7 @@ func TestBuildClientWithProxy(t *testing.T) {
 	httpProxy := goproxy.NewProxyHttpServer()
 	go func() {
 		if err := http.ListenAndServe("127.0.0.1:50801", httpProxy); err != nil {
-			t.Fatal(err)
+			t.Error(err)
 		}
 	}()
 	time.Sleep(time.Second)
@@ -77,4 +79,19 @@ func TestBuildClientWithProxy(t *testing.T) {
 			t.Errorf("Failed to read response body: %s", string(body))
 		}
 	}
+}
+
+func TestFormatMsg(t *testing.T) {
+	msg := &config.Msg{
+		Title:       "Test Title",
+		Description: "Test Description",
+		Link:        "http://test.link",
+		Guid:        "Test Guid",
+		Date:        "Test Date",
+	}
+
+	expected := "title: Test Title\nDesc:Test Description\nLink: http://test.link\nGuid: Test Guid\nDate: Test Date"
+	result := FormatMsg(msg)
+
+	assert.Equal(t, expected, result)
 }

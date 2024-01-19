@@ -41,10 +41,10 @@ func NewMonitor(url string, interval int, proxy string, ctx context.Context, can
 	}
 }
 
-func Start() {
-	url := config.Config.Get("monitor.url").(string)
-	interval := config.Config.Get("monitor.interval").(int)
-	proxy := config.Config.Get("monitor.proxy").(string)
+func StartMonitor() {
+	url := config.GlobalConfig.Get("monitor.url").(string)
+	interval := config.GlobalConfig.Get("monitor.interval").(int)
+	proxy := config.GlobalConfig.Get("monitor.proxy").(string)
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
@@ -56,7 +56,7 @@ func Start() {
 }
 
 func (m *Monitor) Start() {
-	log.Printf("Start monitor %s", m.Url)
+	log.Printf("StartMonitor monitor %s", m.Url)
 	go func() {
 		for {
 			select {

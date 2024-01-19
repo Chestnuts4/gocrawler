@@ -1,11 +1,19 @@
-tgbot:
-  token: token
-  proxy: "socks5://127.0.0.1:10808"
+bot:
+  ip: 0.0.0.0
+  port: 8080
+  # 
+  list:
+    - tgbot:
+        token: token
+        proxy: "socks5://127.0.0.1:10808"
+    - lanxin:
+        - secret: secret
+          webhook: webhook
+          proxy: "http://127.0.0.1:8083"
+        - secret: secret
+          webhook: webhook
+          proxy: "http://127.0.0.1:8083"
 
-lanxin:
-  secret: secret
-  webhook: webhook
-  proxy: "http://127.0.0.1:8083"
 
 monitor:
   # 监控的URL
