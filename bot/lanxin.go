@@ -114,6 +114,7 @@ func (b *LanxinBot) Start(ctx context.Context) error {
 			}
 		}
 	}()
+	log.Printf("%s started", b.name)
 	return nil
 }
 

@@ -78,6 +78,7 @@ func (t *TgBot) Start(ctx context.Context) error {
 			}
 		}
 	}()
+	log.Printf("%s started", t.name)
 	t.bot.Start()
 	return nil
 }
