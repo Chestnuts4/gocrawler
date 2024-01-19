@@ -3,12 +3,13 @@ package bot
 import (
 	"context"
 	"log"
-	"strings"
 
 	"github.com/Chestnuts4/citrix-update-monitor/config"
 	"github.com/Chestnuts4/citrix-update-monitor/util"
 	tb "gopkg.in/telebot.v3"
 )
+
+var TgGroups = make(map[string]int64)
 
 type TgBot struct {
 	name    string
@@ -56,7 +57,7 @@ func (t *TgBot) Start(ctx context.Context) error {
 		for {
 			select {
 			case msg := <-t.msgChan:
-				err := t.sendMsg(msg)
+				err := t.sendMsgAllGroups(msg)
 				if err != nil {
 					t.errChan <- err
 				}
@@ -82,34 +83,27 @@ func (t *TgBot) Start(ctx context.Context) error {
 }
 
 func registerHandle(bot *tb.Bot) {
-	bot.Handle(tb.OnText, func(c tb.Context) error {
-		// 判断在艾特自己 contains
-		if strings.Contains(c.Message().Text, "@"+bot.Me.Username) {
-			// 回复消息
-			err := c.Send("Hello, I'm a bot!")
-			if err != nil {
-				log.Println(err)
-			}
+	bot.Handle(tb.OnText, OnTextHandle)
 
-		}
-		// get group id from message
-		if c.Message().Chat.Type == tb.ChatGroup {
-			log.Printf("group id: %v\nname: %v", c.Message().Chat.ID, c.Message().Chat.Title)
-
-		}
-		// get group name from message
-		log.Printf("message: %v", c.Message().Text)
-
-		return nil
-
+	bot.Handle(TG_PING, func(c tb.Context) error {
+		saveGroupId(c)
+		return c.Send("pong")
 	})
+	bot.Handle(TG_START, StartHandle)
+	bot.Handle(TG_HELP, HelpHandle)
+	bot.Handle(tb.OnAddedToGroup, OnAddedToGroupHandle)
 }
 
-func (t *TgBot) sendMsg(msg string) error {
-	_, err := t.bot.Send(&tb.Chat{ID: -4193925869}, msg)
-	if err != nil {
-		return err
+func (t *TgBot) sendMsgAllGroups(msg string) error {
+
+	// 遍历群组，给每个群组发消息
+	for _, v := range TgGroups {
+		_, err := t.bot.Send(&tb.Chat{ID: v}, msg)
+		if err != nil {
+			return err
+		}
 	}
+
 	//log.Printf("send msg: %v", retMsg)
 	return nil
 }

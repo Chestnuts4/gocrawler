@@ -20,9 +20,10 @@ func main() {
 
 	requestCount := 0
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		if requestCount == 0 {
+		fmt.Printf("Request count: %d\n", requestCount)
+		if requestCount%2 == 0 {
 			fmt.Fprintf(w, "%s", rss1)
-		} else if requestCount == 1 {
+		} else if requestCount%2 == 1 {
 			fmt.Fprintf(w, "%s", rss2)
 		} else {
 			fmt.Fprintf(w, "%s", rss2)

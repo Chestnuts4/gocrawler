@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
@@ -130,7 +131,12 @@ func (m *Monitor) downloadRSS() ([]byte, error) {
 		return nil, fmt.Errorf("failed to build client with proxy: %v", err)
 	}
 
-	resp, err := client.Get(m.Url)
+	req, err := http.NewRequest("GET", m.Url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request: %v", err)
+	}
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0")
+	resp, err := client.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("failed to download RSS: %v", err)
 	}
