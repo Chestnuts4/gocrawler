@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"log"
 
 	"github.com/Chestnuts4/citrix-update-monitor/bot"
 	"github.com/Chestnuts4/citrix-update-monitor/config"
@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	fmt.Println("bot started")
-	config.LoadConf()
-	go rss.Start()
-	bot.Start()
+	log.Println("started")
+	config.LoadConf(config.ConfPath)
+	go rss.StartMonitor()
+	bot.StartBots()
 }
