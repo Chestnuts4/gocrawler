@@ -130,6 +130,11 @@ type lanxinMsgData struct {
 	MsgData   MsgData `json:"msgData"`
 }
 
+func (b *LanxinBot) sendMsgAllWebHook(msg string) error {
+
+	return nil
+}
+
 func (b *LanxinBot) sendMsg(msg string) error {
 	signature := util.LanxinSign(b.secret)
 	timestamp := fmt.Sprintf("%v", time.Now().Unix())
