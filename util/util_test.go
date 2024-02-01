@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Chestnuts4/citrix-update-monitor/config"
+	"github.com/Chestnuts4/gocrawler/config"
 	socks5 "github.com/armon/go-socks5"
 	"github.com/elazarl/goproxy"
 	"github.com/stretchr/testify/assert"

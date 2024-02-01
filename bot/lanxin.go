@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Chestnuts4/citrix-update-monitor/config"
-	"github.com/Chestnuts4/citrix-update-monitor/util"
+	"github.com/Chestnuts4/gocrawler/config"
+	"github.com/Chestnuts4/gocrawler/util"
 )
 
 const lanxinBotName = "lanxin bot"

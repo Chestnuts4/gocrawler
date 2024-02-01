@@ -6,7 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/Chestnuts4/citrix-update-monitor/config"
+	"github.com/Chestnuts4/gocrawler/config"
 	"github.com/prometheus/common/log"
 )
 
