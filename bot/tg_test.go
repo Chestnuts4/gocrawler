@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/Chestnuts4/citrix-update-monitor/config"
+	"github.com/Chestnuts4/gocrawler/config"
 )
 
 func TestTgBotStart(t *testing.T) {

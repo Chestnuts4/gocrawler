@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/Chestnuts4/citrix-update-monitor/config"
+	"github.com/Chestnuts4/gocrawler/config"
 	"golang.org/x/net/proxy"
 )
 

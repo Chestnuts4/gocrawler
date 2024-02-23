@@ -4,8 +4,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/Chestnuts4/citrix-update-monitor/bot"
-	"github.com/Chestnuts4/citrix-update-monitor/config"
+	"github.com/Chestnuts4/gocrawler/bot"
+	"github.com/Chestnuts4/gocrawler/config"
 	"github.com/mmcdole/gofeed"
 )
 
